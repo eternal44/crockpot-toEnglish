@@ -1,28 +1,26 @@
 {
-  "name": "convert-number",
-  "version": "0.1.0",
-  "description": "Convert numbers from one format to another",
+  "name": "crockpot-toEnglish",
+  "version": "0.0.1",
+  "description": "Convert decimal integers to English",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eternal44/convert-number.git"
+    "url": "git+https://github.com/eternal44/crockpot-toEnglish"
   },
   "keywords": [
     "convert",
     "number",
-    "english",
-    "roman",
-    "numeral"
+    "english"
   ],
   "author": "James Youn <jamesyoun710@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eternal44/convert-number/issues"
+    "url": "https://github.com/eternal44/crockpot-toEnglish/issues"
   },
-  "homepage": "https://github.com/eternal44/convert-number#readme",
+  "homepage": "https://github.com/eternal44/crockpot-toEnglish#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",

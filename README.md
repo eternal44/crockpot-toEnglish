@@ -1,12 +1,11 @@
-# convert-number [![Build Status](https://travis-ci.org/eternal44/convert-number.svg?branch=master)](https://travis-ci.org/eternal44/convert-number)
+# crockpot-toEnglish [![Build Status](https://travis-ci.org/eternal44/crockpot-toEnglish.svg?branch=master)](https://travis-ci.org/eternal44/crockpot-toEnglish)
 
-
-> Convert numbers from one format to another.
+> Converts decimal integers to English.  See the main crockpot library for a full set of conversions.
 
 ## Install
 
 ```
-$ npm install --save convert-number
+$ npm install --save crockpot-toEnglish
 ```
 
 ## Development
@@ -30,9 +29,9 @@ $ mocha specs/**
 ## Usage
 
 ```js
-var convertNumber = require('convert-number')
+var decimalToEnglish = require('crockpot-toEnglish')
 
-convertNumber(2450)
+decimalToEnglish(2450)
 // two thousand four hundred fifty
 ```
 ## License
