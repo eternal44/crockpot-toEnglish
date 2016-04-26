@@ -1,4 +1,6 @@
 module.exports = [
+  { description: "Error: pass in a number", integer: NaN },
+  { description: "Error: pass in a number", integer: 'horse' },
   { description: "one hundred twelve", integer: 112 },
   { description: "zero", integer: 0 },
   { description: "five hundred forty", integer: 540 },

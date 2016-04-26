@@ -2,6 +2,10 @@ var numbersToWords = require('./lib/placesMap');
 var numbersToPlace = require('./lib/numbersToPlace');
 
 function numberToEnglish (number) {
+  // validate input
+  if(typeof number !== 'number' || isNaN(number)) {
+    return 'Error: pass in a number';
+  }
   var output;
   var place;
   var numInPlace;
