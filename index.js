@@ -1,6 +1,6 @@
-var maps = require('./helpers/placesMap')();
-var arrayifyNumber = require('./helpers/arrayifyNumber');
-var transcribe = require('./helpers/transcribe')();
+var maps = require('./lib/placesMap')();
+var arrayifyNumber = require('./lib/arrayifyNumber');
+var transcribe = require('./lib/transcribe')();
 
 function numberToEnglish (number) {
   var placeArray = arrayifyNumber(number);

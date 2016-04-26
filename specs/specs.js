@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var numberToEnglish = require('./../src/conversion');
+var numberToEnglish = require('./../index');
 var testParams = require('./testList')
 
 describe('Decimal# ', function(){
