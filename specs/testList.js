@@ -12,6 +12,7 @@ module.exports = [
   { description: 'seventy-eight million one hundred ninety-three thousand five hundred twelve', integer: 78193512 },
   { description: 'two billion three hundred eighty-five million twenty-four thousand five hundred eighty-two', integer: 2385024582 },
   { description: 'nine hundred seventy-three billion five hundred sixty-three million seven hundred thousand three hundred fifty-three', integer: 973563700353 },
+  { description: 'two hundred seven', integer: 207 },
 
 ]
 
