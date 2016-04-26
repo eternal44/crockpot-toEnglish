@@ -16,5 +16,5 @@ gulp.task('lint', function(){
 })
 
 gulp.task('test', function(){
-  gulp.watch(['src/**', 'specs/**'], ['mocha'])
+  gulp.watch(['./**', 'specs/**'], ['mocha'])
 })

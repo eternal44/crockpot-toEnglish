@@ -1,6 +1,6 @@
 {
   "name": "crockpot-toEnglish",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Convert decimal integers to English",
   "main": "index.js",
   "scripts": {
