@@ -1,27 +1,52 @@
-var maps = require('./lib/placesMap')();
-var arrayifyNumber = require('./lib/arrayifyNumber');
-var transcribe = require('./lib/transcribe')();
+var numbersToWords = require('./lib/placesMap');
+var numbersToPlace = require('./lib/numbersToPlace');
 
 function numberToEnglish (number) {
-  var placeArray = arrayifyNumber(number);
+  var output;
+  var place;
+  var numInPlace;
+  var numLeft;
+  var restOfString;
 
-  // concat the transcribed number to results string
-  var transcribedResult = '';
-  var subsetCount = placeArray.length;
-  var transcribedSegment;
-
-  for(var x = 0; x < placeArray.length; x++){
-    subsetCount--;
-    transcribedSegment = transcribe(placeArray[x]);
-    if(transcribedSegment.length !== 0){
-      transcribedResult += transcribedSegment + ' ' + maps.subsetMap[subsetCount] + ' ';
-    }
+  // for cases when number in numbersToWords object
+  if(numbersToWords[number]){
+    output = numbersToWords[number];
   }
 
-  if(number == 0) return 'zero'; 
-  if(number == 10) return 'ten'; 
+  // transcribe 2 digit numbers
+  else if(number < 100){
+    numInPlace = Math.floor(number / 10);
+    numLeft = number % 10;
+    output = numbersToWords[numInPlace * 10] + '-' + numberToEnglish(numLeft);
+  }else{
 
-  return transcribedResult.trim();
-}
+    // transcribe 3 digit numbers
+    if(number < 1000){
+      place = 100;
+
+    // find largest place holder
+    }else{
+      place = 1000;
+      while(place * 1000 <= number){
+        place *= 1000;
+      }
+    }
+
+    numInPlace = Math.floor(number/place);
+    numLeft = number % place;
+
+    // transcribe largest place (ex: '12' in '12,538,639')
+    output = numberToEnglish(numInPlace) + ' ' + numbersToPlace[place];
+
+    // transcribe '538,639'
+    restOfString = numberToEnglish(numLeft);
+
+    // spacing
+    if(restOfString !== 'zero'){
+      output += ' ' + restOfString;
+    }
+  }
+  return output;
+};
 
 module.exports = numberToEnglish;
